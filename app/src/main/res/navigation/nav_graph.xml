@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.hitglynorthz.elepes.ui.home.HomeFragment"
+        android:label="@string/homeFragment"
+        tools:layout="@layout/fragment_home"/>
+
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.hitglynorthz.elepes.ui.details.DetailsFragment"
+        android:label="@string/detailsFragment"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="currentItem"
+            app:argType="com.hitglynorthz.elepes.models.Library" />
+        <action
+            android:id="@+id/action_detailsFragment_to_editFragment"
+            app:destination="@id/editFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_detailsFragment"
+        app:destination="@id/detailsFragment"
+        app:enterAnim="@anim/slide_up"
+        app:exitAnim="@anim/fragment_fade_exit"
+        app:popEnterAnim="@anim/fragment_fade_enter"
+        app:popExitAnim="@anim/slide_down" />
+
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.hitglynorthz.elepes.ui.crud.AddFragment"
+        android:label="@string/addFragment"
+        tools:layout="@layout/fragment_add" />
+    <action
+        android:id="@+id/action_global_addFragment"
+        app:destination="@id/addFragment"
+        app:enterAnim="@anim/fragment_fade_enter"
+        app:exitAnim="@anim/fragment_fade_exit"
+        app:popEnterAnim="@anim/fragment_fade_enter"
+        app:popExitAnim="@anim/fragment_fade_exit" />
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.hitglynorthz.elepes.ui.search.SearchFragment"
+        android:label="@string/searchFragment"
+        tools:layout="@layout/fragment_search"/>
+    <action
+        android:id="@+id/action_global_searchFragment"
+        app:destination="@id/searchFragment"
+        app:enterAnim="@anim/fragment_fade_enter"
+        app:exitAnim="@anim/fragment_fade_exit"
+        app:popEnterAnim="@anim/fragment_fade_enter"
+        app:popExitAnim="@anim/fragment_fade_exit" />
+
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.hitglynorthz.elepes.ui.crud.EditFragment"
+        android:label="@string/editFragment"
+        tools:layout="@layout/fragment_edit">
+        <argument
+            android:name="currentItem"
+            app:argType="com.hitglynorthz.elepes.models.Library" />
+        <action
+            android:id="@+id/action_editFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/mainBottomSheet"
+        android:name="com.hitglynorthz.elepes.ui.sheets.MainBottomSheet"
+        android:label="main_bottomsheet"
+        tools:layout="@layout/bottomsheet_main" />
+    <action
+        android:id="@+id/action_global_mainBottomSheet"
+        app:destination="@id/mainBottomSheet" />
+
+    <fragment
+        android:id="@+id/searchAlbumFragment"
+        android:name="com.hitglynorthz.elepes.ui.search.SearchAlbumFragment"
+        android:label="@string/searchAlbumFragment"
+        tools:layout="@layout/fragment_search_album">
+        <action
+            android:id="@+id/action_searchAlbumFragment_to_addBottomSheet"
+            app:destination="@id/addBottomSheet" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_searchAlbumFragment"
+        app:destination="@id/searchAlbumFragment"
+        app:enterAnim="@anim/fragment_fade_enter"
+        app:exitAnim="@anim/fragment_fade_exit"
+        app:popEnterAnim="@anim/fragment_fade_enter"
+        app:popExitAnim="@anim/fragment_fade_exit" />
+
+    <dialog
+        android:id="@+id/addBottomSheet"
+        android:name="com.hitglynorthz.elepes.ui.sheets.AddBottomSheet"
+        android:label="AddBottomSheet"
+        tools:layout="@layout/bottomsheet_add">
+        <argument
+            android:name="currentItem"
+            app:argType="com.hitglynorthz.elepes.models.search.Cell" />
+        <action
+            android:id="@+id/action_addBottomSheet_to_searchAlbumFragment"
+            app:destination="@id/searchAlbumFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/allFragment"
+        android:name="com.hitglynorthz.elepes.ui.home.AllFragment"
+        android:label="AllFragment" />
+    <fragment
+        android:id="@+id/artistsFragment"
+        android:name="com.hitglynorthz.elepes.ui.home.ArtistsFragment"
+        android:label="ArtistsFragment" />
+    <fragment
+        android:id="@+id/favsFragment"
+        android:name="com.hitglynorthz.elepes.ui.home.FavsFragment"
+        android:label="FavsFragment" />
+
+    <fragment
+        android:id="@+id/artistListFragment"
+        android:name="com.hitglynorthz.elepes.ui.details.ArtistListFragment"
+        android:label="ArtistListFragment"
+        tools:layout="@layout/fragment_artist_list">
+        <argument
+            android:name="artist"
+            app:argType="string" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_artistListFragment"
+        app:destination="@id/artistListFragment"
+        app:enterAnim="@anim/fragment_fade_enter"
+        app:exitAnim="@anim/fragment_fade_exit"
+        app:popEnterAnim="@anim/fragment_fade_enter"
+        app:popExitAnim="@anim/fragment_fade_exit" />
+</navigation>

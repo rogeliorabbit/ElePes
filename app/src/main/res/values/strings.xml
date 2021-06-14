@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">ElePes</string>
+
+    <!-- Toolbar Actions -->
+    <string name="action_settings">Settings</string>
+    <string name="action_sort">Sort</string>
+    <string name="action_search">Search</string>
+    <string name="action_favs">Favs</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_list_op">List Options</string>
+    <string name="action_list_type">List Type</string>
+
+    <!-- Home Fragment -->
+    <string name="homeFragment">ElePes</string>
+
+    <!-- Details Fragment -->
+    <string name="detailsFragment">Details</string>
+    <string name="noRecord">Unknown Record Company</string>
+    <string name="detailsReleasedDate">Released Date\n%1$s</string>
+    <string name="detailsnTracks">#Tracks\n%1$s</string>
+    <string name="dialogDeleteTitle">Delete Item?</string>
+    <string name="dialogDeleteText">Are you sure you want to delete this?</string>
+    <string name="dialogDeleteOk">Delete</string>
+    <string name="dialogDeleteNo">Cancel</string>
+
+    <!-- Add/Edit Fragment -->
+    <string name="addFragment">Add</string>
+    <string name="editFragment">Edit</string>
+    <string name="add_cover">Add Album Cover</string>
+    <string name="tilTitle">Album Title</string>
+    <string name="tilTitleRequired">*Required</string>
+    <string name="tilTitleError">Can\'t be empty</string>
+    <string name="tilArtist">Artist</string>
+    <string name="tilArtistRequired">*Required</string>
+    <string name="tilArtistError">Can\'t be empty</string>
+    <string name="tilRecord">Record Company</string>
+    <string name="tilType">Type</string>
+    <string-array name="types">
+        <item>CD</item>
+        <item>Vinyl</item>
+        <item>Cloud Music</item>
+    </string-array>
+
+    <!-- Search Album Fragment -->
+    <string name="searchAlbumFragment">Search Album</string>
+    <string name="searchAlbumAddDialogTitle">Add to your library?</string>
+    <string name="searchAlbumAddDialogText">Artist:&#160;%1$s\nAlbum:&#160;%2$s</string> <!-- String.format(resources.getString(R.string.searchAlbumAddDialogText), cell.artist, cell.album) -->
+    <string name="searchAlbumAddDialogOk">Add</string>
+    <string name="searchAlbumAddDialogNo">Cancel</string>
+    <string name="searchAlbumItemAdded">Added to your library</string>
+
+    <!-- Search Fragment -->
+    <string name="searchFragment">Search</string>
+    <string name="searchHint">Search</string>
+</resources>

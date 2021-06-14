@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF83a9bb</color>
+    <color name="colorPrimaryVariant">#FF739eb2</color>
+    <color name="colorPrimaryDark">#FF000000</color>
+    <color name="colorOnPrimary">#FFFFFFFF</color>
+
+    <color name="colorSecondary">#FFfe9b75</color>
+    <color name="colorSecondaryVariant">#FFfe8f64</color>
+    <color name="colorOnSecondary">#FF000000</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="statusBarColor">@android:color/transparent</color>
+    <color name="navigationBarColor">#E62E2E2E</color>
+
+    <color name="primaryLight">#f2e8e9</color>
+    <color name="secondaryLight">#fef2ed </color>
+
+    <!-- Toolbar -->
+    <color name="toolbarColor">#141414</color> <!--E62E2E2E-->
+    <color name="contextualColor">#985d46</color>
+
+    <!-- BottomAppBar -->
+    <color name="bottomAppBarColor">#E62E2E2E</color>
+
+    <!-- Artists -->
+    <color name="artistRowBackground">#3c545f</color>
+</resources>
